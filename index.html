@@ -450,41 +450,44 @@
         </div>
       </div>
       <div class="fade-up">
-        <div class="contact-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label>Full Name</label>
-              <input type="text" placeholder="Your name">
+        <form id="contact-form" class="contact-form">
+            <input type="hidden" name="access_key" value="3eaa0222-9a88-4412-8d9d-73aa354212ec">
+            <input type="hidden" name="from_name" value="SMF Website">
+            <input type="hidden" name="subject" value="New Inquiry from SMF Website">
+
+            <div class="form-row">
+                <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                <label>Organization</label>
+                <input type="text" name="organization" placeholder="Your organization">
+                </div>
             </div>
+
             <div class="form-group">
-              <label>Organization</label>
-              <input type="text" placeholder="Your organization">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="your@email.com" required>
             </div>
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" placeholder="your@email.com">
-          </div>
-          <div class="form-group">
-            <label>Service of Interest</label>
-            <select>
-              <option value="" disabled selected>Select a service</option>
-              <option>Strategic HR Consulting</option>
-              <option>Financial Management</option>
-              <option>Strategic Planning</option>
-              <option>Surveys & Research</option>
-              <option>Project Management</option>
-              <option>Political Strategy</option>
-              <option>Training & Organizational Development</option>
-              <option>General Inquiry</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Your Message</label>
-            <textarea placeholder="Briefly describe your challenge or project..."></textarea>
-          </div>
-          <button class="btn-submit">Send Message →</button>
-        </div>
+
+            <div class="form-group">
+                <label>Service of Interest</label>
+                <select name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option>Strategic Planning</option>
+                <option>Surveys & Research</option>
+                <option>General Inquiry</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Your Message</label>
+                <textarea name="message" placeholder="Briefly describe your challenge..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submit-btn">Send Message →</button>
+        </form>
       </div>
     </div>
   </div>
