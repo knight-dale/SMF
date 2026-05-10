@@ -28,7 +28,7 @@ const projectData = {
     title: "County Youth Service & Women Empowerment Program",
     timeline: "2015 to Date",
     partner: "County Government of Kakamega",
-    desc: "It is an initiative of the County Government of Kakamega. SMF has been involved through the process of inception, developing framework, structures and systems and offering advisory on the recruitment and training of the service men and women. The then inception of “Kazi Mashinani” (grass root casual work) Program in 2015 and subsequent roll out in 2016 to 2018 preceded the County Youth Service & Women Empowerment Programme (CYSWEP) able to give employment to 2000 youth and women categories comprising: 720 security guards, 442 market cleaners, and 840 roads maintenance.  The programme has seen more than 1000 youth enrolled for training in diverse technical areas offered at the local county polytechnics. The CYSWEP together with its predecessor,” Kazi Mashinani” have been able to engage a combined total of 10,000 underprivileged youth and women thereby contributing towards poverty reduction in society, improving health through improving the local business environment through improved infrastructure maintenance."
+    desc: "It is an initiative of the County Government of Kakamega. SMF has been involved through the process of inception, developing framework, structures and systems and offering advisory on the recruitment and training of the service men and women. The then inception of “Kazi Mashinani” (grass root casual work) Program in 2015 and subsequent roll out in 2016 to 2018 preceded the County Youth Service & Women Empowerment Programme (CYSWEP) able to give employment to 2000 youth and women categories comprising: 720 security guards, 442 market cleaners, and 840 roads maintenance. The programme has seen more than 1000 youth enrolled for training in diverse technical areas offered at the local county polytechnics. The CYSWEP together with its predecessor,” Kazi Mashinani” have been able to engage a combined total of 10,000 underprivileged youth and women thereby contributing towards poverty reduction in society, improving health through improving the local business environment through improved infrastructure maintenance."
   },
   'Mwangaza': {
     title: "Mwangaza African Programme",
@@ -52,7 +52,7 @@ const projectData = {
     title: "Nurturing Care for Early Childhood Development",
     timeline: "2023 to Date",
     partner: "Lake Region Economic Bloc (LREB)",
-    desc: "The LREB is implementing a County led Nurturing Care for ECD Model. The goal is to ensure that children not only survive but thrive and develop to their full potential putting an emphasis on the first one thousand days of life under the good care of their guardians. At the County level, the initiative is driven by a Multi sectorial coordination structure (MST). SMF has been involved since inception of this program. So far the company  has helped train the MST members on the science of scaling up Nurturing Care for Early Childhood Development through emphasizing on optimizing energies to identify and scale up best practices of Nurturing Care for Early Childhood Development by their care givers who are mostly women, to conduct advocacy on: Reproductive maternal, newborn, child and adolescent health (RMNCAH) & Nurturing Care in nutrition through developed manuals,  spearhead Baseline Survey on Nurturing Care for Early Childhood Development through development of data collection too (Kobo Toolbox),  trained the Research Assistants on the tool and developed comprehensive report of the Survey."
+    desc: "The LREB is implementing a County led Nurturing Care for ECD Model. The goal is to ensure that children not only survive but thrive and develop to their full potential putting an emphasis on the first one thousand days of life under the good care of their guardians. At the County level, the initiative is driven by a Multi sectorial coordination structure (MST). SMF has been involved since inception of this program. So far the company has helped train the MST members on the science of scaling up Nurturing Care for Early Childhood Development through emphasizing on optimizing energies to identify and scale up best practices of Nurturing Care for Early Childhood Development by their care givers who are mostly women, to conduct advocacy on: Reproductive maternal, newborn, child and adolescent health (RMNCAH) & Nurturing Care in nutrition through developed manuals, spearhead Baseline Survey on Nurturing Care for Early Childhood Development through development of data collection too (Kobo Toolbox), trained the Research Assistants on the tool and developed comprehensive report of the Survey."
   },
   'GLS': {
     title: "The Global Leadership Summit (GLS)",
@@ -64,13 +64,11 @@ const projectData = {
 
 function openProjectModal(key) {
   const data = projectData[key];
-  
   if (data) {
     document.getElementById('modalTitle').innerText = data.title;
     document.getElementById('modalTimeline').innerText = data.timeline;
     document.getElementById('modalPartner').innerText = data.partner;
     document.getElementById('modalDescription').innerText = data.desc;
-    
     const modal = document.getElementById('projectModal');
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
@@ -92,12 +90,3 @@ window.onclick = function(event) {
 window.onkeydown = function(event) {
   if (event.key === "Escape") { closeProjectModal(); }
 }
-
-window.addEventListener('load', () => {
-  const welcomeText = document.getElementById('hero-welcome');
-  if (welcomeText) {
-    setTimeout(() => {
-      welcomeText.classList.add('glow-pulse');
-    }, 500);
-  }
-});
