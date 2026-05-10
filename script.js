@@ -11,15 +11,44 @@ document.querySelectorAll('.service-card').forEach((card, i) => {
 });
 
 const submitBtn = document.querySelector('.btn-submit');
-if (submitBtn) {
-  submitBtn.addEventListener('click', (e) => {
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    submitBtn.textContent = 'Message Sent ✓';
-    submitBtn.style.background = '#2d6a4f';
-    setTimeout(() => {
-      submitBtn.textContent = 'Send Message →';
-      submitBtn.style.background = '';
-    }, 3000);
+    
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    const formData = new FormData(contactForm);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: json
+    })
+    .then(async (response) => {
+      if (response.status == 200) {
+        submitBtn.textContent = 'Message Sent ✓';
+        submitBtn.style.background = '#2d6a4f';
+        contactForm.reset();
+      } else {
+        submitBtn.textContent = 'Error! Try again';
+      }
+    })
+    .catch(error => {
+      submitBtn.textContent = 'Something went wrong';
+    })
+    .finally(() => {
+      setTimeout(() => {
+        submitBtn.textContent = 'Send Message →';
+        submitBtn.style.background = '';
+        submitBtn.disabled = false;
+      }, 5000);
+    });
   });
 }
 
