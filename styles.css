@@ -789,16 +789,55 @@ section { padding: 6rem 4rem; }
 }
 
 .leader-card {
-  background: rgba(255,255,255,0.04);
-  padding: 3rem 2.5rem;
+  height: 450px;
+  background-size: cover;
+  background-position: center top;
   position: relative;
-  border-bottom: 3px solid transparent;
-  transition: border-color 0.3s, background 0.3s;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  transition: transform 0.4s ease;
 }
 
 .leader-card:hover {
-  background: rgba(201,168,76,0.08);
-  border-bottom-color: var(--gold);
+  transform: translateY(-10px);
+}
+
+.leader-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.5rem 1.5rem;
+  background: linear-gradient(to top, 
+    rgba(26, 11, 46, 0.95) 20%, 
+    rgba(26, 11, 46, 0.6) 60%, 
+    transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.leader-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+}
+
+.leader-role {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--purple-light);
+  margin-bottom: 1rem;
+}
+
+.leader-bio {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .leader-initial {
@@ -810,24 +849,6 @@ section { padding: 6rem 4rem; }
   font-size: 1.6rem; font-weight: 300; color: var(--gold);
   margin-bottom: 2rem;
   border-radius: 50%;
-}
-
-.leader-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.35rem; font-weight: 400; color: var(--cream);
-  margin-bottom: 0.4rem;
-}
-
-.leader-role {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 0.72rem; letter-spacing: 0.2em;
-  text-transform: uppercase; color: var(--gold);
-  margin-bottom: 1.25rem;
-}
-
-.leader-bio {
-  font-size: 0.85rem; font-weight: 300; line-height: 1.8;
-  color: rgba(255,255,255,0.5);
 }
 
 #leadership {
