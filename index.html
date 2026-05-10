@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/jpeg" href="logo.jpg">
-<title>Strategic Management Firm Ltd: Never Compromise Quality</title>
+<title>Strategic Management Firm Ltd</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -25,36 +25,91 @@
 </nav>
 
 <section id="hero">
-  <div class="hero-left">
-    <div class="hero-eyebrow">Strategic Management Firm Ltd · Est. Kenya</div>
-    <h1 class="hero-h1">Ideas that <em>move</em><br>organizations<br>forward.</h1>
-    <p class="hero-sub">A premier consultancy empowering public, private, and non-profit sectors across Kenya to achieve sustainable growth and operational excellence.</p>
-    <div class="hero-actions">
-      <a href="#services" class="btn-primary">Our Services</a>
-      <a href="#contact" class="btn-ghost">Request a Proposal</a>
+  <div class="hero-overlay-pattern"></div>
+  <div class="section-inner hero-flex">
+    
+    <div class="hero-text-content">
+      <div class="hero-eyebrow">Strategic Management Firm Ltd · Est. 2005</div>
+      <h1 class="hero-h1">Transformative solutions in <em>strategy</em> and <em>intelligence</em>.</h1>
+      
+      <div class="hero-intro-details">
+        <p>
+          Strategic Management Firm Limited (SMF) is a premier private consultancy dedicated to empowering organizations across the public, private, and non-profit sectors to achieve sustainable growth and operational excellence. 
+        </p>
+        <p>
+          With 20 years of impact, we deliver customized, innovative strategic solutions from our headquarters in Kakamega to various counties across Kenya.
+        </p>
+      </div>
+
+      <div class="motto-container">
+        <span class="motto-text">Never Compromise Quality</span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View Our Projects</a>
+        <a href="#contact" class="btn-ghost">Request a Proposal</a>
+      </div>
     </div>
+
+    <div class="hero-visual">
+      <img src="chair.jpg" alt="Executive Leadership" class="hero-img">
+    </div>
+
   </div>
-  <div class="hero-right">
-    <div class="hero-graphic">
-      <div class="hero-circle-outer"></div>
-      <div class="hero-circle-mid"></div>
-      <div class="hero-circle-inner">
-        <div class="num">20+</div>
-        <div class="label">Years of Impact</div>
+</section>
+
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-tag">Impact Portfolio</div>
+    <h2 class="section-title">Our Projects</h2>
+    
+    <div class="projects-grid">
+      <div class="project-card" style="background-image: linear-gradient(rgba(26,11,46,0.8), rgba(26,11,46,0.8)), url('youth-empowerment.jpg');">
+        <div class="project-content">
+          <h3>CYSWEP</h3>
+          <p>County Youth Service and Women Empowerment Programme engaged over 10,000 youth in Kakamega.</p>
+          <button class="btn-project-view" onclick="openProjectModal('CYSWEP')">View Details</button>
+        </div>
       </div>
-    </div>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="hero-stat-num">5</div>
-        <div class="hero-stat-label">Offices Nationwide</div>
+
+      <div class="project-card" style="background-image: linear-gradient(rgba(26,11,46,0.8), rgba(26,11,46,0.8)), url('health-africa.jpg');">
+        <div class="project-content">
+          <h3>Mwangaza African Programme</h3>
+          <p>Providing life-changing health and education programs across Kenya, Liberia, and South Africa.</p>
+          <button class="btn-project-view" onclick="openProjectModal('Mwangaza')">View Details</button>
+        </div>
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">7</div>
-        <div class="hero-stat-label">Service Verticals</div>
+
+      <div class="project-card" style="background-image: linear-gradient(rgba(26,11,46,0.8), rgba(26,11,46,0.8)), url('palweco.jpg');">
+        <div class="project-content">
+          <h3>PALWECO</h3>
+          <p>Multi-sectoral rural development focused on poverty reduction and household alleviation strategies.</p>
+          <button class="btn-project-view" onclick="openProjectModal('PALWECO')">View Details</button>
+        </div>
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">3</div>
-        <div class="hero-stat-label">Sectors Served</div>
+
+      <div class="project-card" style="background-image: linear-gradient(rgba(26,11,46,0.8), rgba(26,11,46,0.8)), url('early-childhood.jpg');">
+        <div class="project-content">
+          <h3>Nurturing Care for ECD</h3>
+          <p>Smart Start initiative for LREB counties focusing on the first 1,000 days of life.</p>
+          <button class="btn-project-view" onclick="openProjectModal('NurturingCare')">View Details</button>
+        </div>
+      </div>
+
+      <div class="project-card" style="background-image: linear-gradient(rgba(26,11,46,0.8), rgba(26,11,46,0.8)), url('business-mission.jpg');">
+        <div class="project-content">
+          <h3>CBBAM Programme</h3>
+          <p>Church Based Business As Mission: Transforming lives through mentoring and access to capital.</p>
+          <button class="btn-project-view" onclick="openProjectModal('CBBAM')">View Details</button>
+        </div>
+      </div>
+
+      <div class="project-card" style="background-image: linear-gradient(rgba(26,11,46,0.8), rgba(26,11,46,0.8)), url('gls.jpg');">
+        <div class="project-content">
+          <h3>The Global Leadership Summit</h3>
+          <p>Empowering Kenyan leaders through world-class training and strategic development.</p>
+          <button class="btn-project-view" onclick="openProjectModal('GLS')">View Details</button>
+        </div>
       </div>
     </div>
   </div>
@@ -112,34 +167,47 @@
 <section id="stratpoll">
   <div class="section-inner">
     <div class="fade-up">
-      <div class="section-tag">StratPoll</div>
-      <h2 class="section-title">Data-driven opinion and intelligence services.</h2>
+      <div class="section-tag">StratPoll.net</div>
+      <h2 class="section-title">From the Ground to Clear Insights</h2>
+      <p class="about-body" style="max-width: 800px; margin-bottom: 3rem;">
+        StratPoll.net is a digital research and opinion polling system developed by Strategic Management Firm Ltd to deliver accurate, data-driven insights. Through structured surveys, trained field teams, and secure analysis, we translate ground realities into actionable intelligence.
+      </p>
     </div>
 
-    <div class="services-grid">
+    <div class="services-grid stratpoll-grid">
       <div class="service-card fade-up">
-        <div class="service-num">SP1</div>
-        <div class="service-name">Political Polling</div>
-        <div class="service-desc">Public opinion research for campaigns, governance feedback, and electoral intelligence.</div>
+        <div class="service-name">Campaign Strategy & Planning</div>
+        <ul class="stratpoll-list">
+          <li>Opinion polls</li>
+          <li>Customer satisfaction surveys</li>
+          <li>Baseline, midline, & endline studies</li>
+        </ul>
       </div>
 
       <div class="service-card fade-up">
-        <div class="service-num">SP2</div>
-        <div class="service-name">Market Surveys</div>
-        <div class="service-desc">Consumer behavior and market trend analysis for strategic decision-making.</div>
+        <div class="service-name">Data Collection Methods</div>
+        <ul class="stratpoll-list">
+          <li>Digital questionnaires</li>
+          <li>Phone interviews</li>
+          <li>On-site & call-based surveys</li>
+        </ul>
       </div>
 
       <div class="service-card fade-up">
-        <div class="service-num">SP3</div>
-        <div class="service-name">Statistical Insights</div>
-        <div class="service-desc">Advanced data interpretation for organizations, NGOs, and institutions.</div>
+        <div class="service-name">Analysis & Reporting</div>
+        <ul class="stratpoll-list">
+          <li>Data cleaning & validation</li>
+          <li>Segmentation & trends</li>
+          <li>Actionable insights & reports</li>
+        </ul>
       </div>
+    </div>
 
-      <div class="service-card fade-up">
-        <div class="service-num">SP4</div>
-        <div class="service-name">StratPoll Reports</div>
-        <div class="service-desc">Structured reports combining field data, analytics, and strategic recommendations.</div>
-      </div>
+    <div class="stratpoll-benefits fade-up">
+      <div class="benefit-item">✓ Secure and confidential data handling</div>
+      <div class="benefit-item">✓ Scientifically designed sampling methods</div>
+      <div class="benefit-item">✓ Evidence-based insights</div>
+      <div class="benefit-item">✓ Ethical and professional research standards</div>
     </div>
   </div>
 </section>
@@ -147,50 +215,100 @@
 <section id="services">
   <div class="section-inner">
     <div class="services-header fade-up">
-      <div class="section-tag">What We Do</div>
-      <h2 class="section-title">Seven pillars of strategic consulting.</h2>
+      <div class="section-tag">Our Expertise</div>
+      <h2 class="section-title">Strategic Consulting Pillars</h2>
+      <p class="about-body" style="color: var(--mid); max-width: 700px;">
+        SMF provides comprehensive support in strategic planning, operational transformation, and leadership alignment to ensure tangible and lasting results.
+      </p>
     </div>
+    
     <div class="services-grid">
       <div class="service-card fade-up">
         <div class="service-num">01</div>
-        <div class="service-name">Strategic HR Consulting</div>
-        <div class="service-desc">End-to-end human resource management — from talent acquisition frameworks to performance management systems tailored to Kenyan organizational contexts.</div>
+        <div class="service-name">Strategic Project Management</div>
+        <div class="service-desc">Ensuring project success through rigorous auditing, proactive monitoring, and comprehensive evaluation processes.</div>
       </div>
+
       <div class="service-card fade-up">
         <div class="service-num">02</div>
-        <div class="service-name">Financial Management</div>
-        <div class="service-desc">Financial planning, budgetary oversight, and fiscal risk management that aligns organizational resources with strategic ambitions.</div>
+        <div class="service-name">Strategic Planning</div>
+        <div class="service-desc">Cultivating innovative ideas into actionable plans and effective strategic turnaround strategies.</div>
       </div>
+
       <div class="service-card fade-up">
         <div class="service-num">03</div>
-        <div class="service-name">Strategic Planning</div>
-        <div class="service-desc">Structured strategy development, competitive positioning, and implementation roadmaps for organizations navigating complex environments.</div>
+        <div class="service-name">Strategic Marketing Services</div>
+        <div class="service-desc">Unlocking potential through market intelligence, political marketing advisory, and targeted training.</div>
       </div>
+
       <div class="service-card fade-up">
         <div class="service-num">04</div>
-        <div class="service-name">Surveys & Research</div>
-        <div class="service-desc">Rigorous market research, stakeholder surveys, and data-driven insights that inform evidence-based decision-making at every level.</div>
+        <div class="service-name">Strategic Corporate Governance</div>
+        <div class="service-desc">Strengthening foundations through finance and governance training and robust financial strategies.</div>
       </div>
+
       <div class="service-card fade-up">
         <div class="service-num">05</div>
-        <div class="service-name">Project Management</div>
-        <div class="service-desc">From inception to closure — disciplined project delivery with robust monitoring, evaluation, and reporting frameworks.</div>
+        <div class="service-name">Strategic Training</div>
+        <div class="service-desc">Empowering capacity through programs in effective team management, change management, and strategic HR.</div>
       </div>
+
       <div class="service-card fade-up">
         <div class="service-num">06</div>
-        <div class="service-name">Political Strategy</div>
-        <div class="service-desc">Campaign strategy, political communications, and electoral research for candidates and political organizations seeking decisive advantage.</div>
+        <div class="service-name">Strategic Political Planning</div>
+        <div class="service-desc">Guiding success through expert consultancy, election models, and system development.</div>
       </div>
+
       <div class="service-card fade-up">
         <div class="service-num">07</div>
-        <div class="service-name">Training & OD</div>
-        <div class="service-desc">Organizational development programs and bespoke training interventions that build lasting institutional capacity and leadership capability.</div>
+        <div class="service-name">Strategic Surveys</div>
+        <div class="service-desc">Providing critical insights through polling, impact assessments, and feasibility studies.</div>
       </div>
+
       <div class="service-card fade-up service-card--cta">
         <div class="service-cta-inner">
-          <div class="service-cta-text">Ready to engage?</div>
-          <a href="#contact" class="btn-primary">Request a Brief</a>
+          <div class="service-cta-text">Ready to optimize your operations?</div>
+          <a href="#contact" class="btn-primary">Engage Us</a>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="section-inner">
+    <div class="fade-up">
+      <div class="section-tag">Competitive Advantage</div>
+      <h2 class="section-title">Where Strategy Meets Data</h2>
+      <p class="about-body" style="max-width: 800px;">
+        SMF uniquely combines business consulting with political strategy—a rare synergy that focuses on data-driven decision-making through advanced surveys and analytics.
+      </p>
+    </div>
+
+    <div class="achievements-container">
+      <div class="achievement-column fade-up">
+        <h3 class="achieve-h3">Political Formations</h3>
+        <ul class="achieve-list">
+          <li><strong>United Democratic Forum Party</strong> (2013)</li>
+          <li><strong>Forum of Economic Development Alliance</strong> (2024)</li>
+        </ul>
+      </div>
+
+      <div class="achievement-column fade-up">
+        <h3 class="achieve-h3">Gubernatorial Strategy</h3>
+        <ul class="achieve-list">
+          <li><strong>Wycliffe Ambetsa Oparanya</strong> (2017)</li>
+          <li><strong>Hillary Barchock</strong> (2022)</li>
+          <li><strong>Fernandes Barasa</strong> (2022)</li>
+        </ul>
+      </div>
+
+      <div class="achievement-column fade-up">
+        <h3 class="achieve-h3">Corporate Leadership</h3>
+        <ul class="achieve-list">
+          <li><strong>Lead Strategist:</strong> Metropol Corporation (2013)</li>
+          <li><strong>Lead Strategist:</strong> Raila Odinga Foundation</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -200,26 +318,52 @@
   <div class="section-inner">
     <div class="fade-up">
       <div class="section-tag">Our Leadership</div>
-      <h2 class="section-title">The minds behind the mission.</h2>
+      <h2 class="section-title">The Minds Behind the Mission</h2>
+      <p class="about-body" style="max-width: 800px; color: rgba(255,255,255,0.7);">
+        Strategic Management Firm Limited is led by a Board of five members supported by an Auxiliary Core Team of technical professionals from diverse backgrounds in strategy, governance, and management.
+      </p>
     </div>
+
     <div class="leadership-grid">
       <div class="leader-card fade-up">
         <div class="leader-initial">EA</div>
         <div class="leader-name">Edward Omung'ala Alukhome</div>
         <div class="leader-role">Chairperson</div>
-        <div class="leader-bio">Providing executive oversight and strategic direction, Edward brings visionary leadership that has guided the firm's growth and reputation for quality across Kenya and East Africa.</div>
+        <div class="leader-bio">Providing executive oversight and strategic direction, Edward leads the Board of Directors in guiding the firm's reputation for quality across East Africa.</div>
       </div>
       <div class="leader-card fade-up">
         <div class="leader-initial">IK</div>
         <div class="leader-name">Issa Jaffar Kavita</div>
-        <div class="leader-role">Head of Operations</div>
-        <div class="leader-bio">Overseeing day-to-day delivery and operational excellence, Issa ensures every client engagement is executed with the precision and quality that defines the SMF brand.</div>
+        <div class="leader-role">Chief Executive Officer</div>
+        <div class="leader-bio">Directly overseeing the firm's four primary directorates, ensuring every client engagement meets the highest standards of operational excellence.</div>
       </div>
       <div class="leader-card fade-up">
         <div class="leader-initial">AL</div>
         <div class="leader-name">Anthony Lumula Mmbaya</div>
-        <div class="leader-role">Head of Research & Product Development</div>
-        <div class="leader-bio">Driving intellectual rigor and innovation, Anthony leads the firm's research practice and continuously develops methodologies and products that keep SMF at the frontier of consulting.</div>
+        <div class="leader-role">Director, Research & Development</div>
+        <div class="leader-bio">Driving intellectual rigor and innovation through specialized data analytics, surveys, and product development methodologies.</div>
+      </div>
+    </div>
+
+    <div class="structure-breakdown fade-up">
+      <h3 class="struct-title">Departmental Directorates</h3>
+      <div class="struct-grid">
+        <div class="struct-item">
+          <h4>Research & Development</h4>
+          <p>Data analysis, market intelligence, and statistical insights.</p>
+        </div>
+        <div class="struct-item">
+          <h4>Finance & Investment</h4>
+          <p>Financial strategy, internal auditing, and asset management.</p>
+        </div>
+        <div class="struct-item">
+          <h4>Operations</h4>
+          <p>Strategic project management, planning, and institutional training.</p>
+        </div>
+        <div class="struct-item">
+          <h4>Corporate Affairs</h4>
+          <p>Public affairs, marketing strategy, and international relations.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -274,8 +418,14 @@
               <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             </div>
             <div>
-              <div class="contact-item-label">Headquarters</div>
-              <div class="contact-item-value">Kakamega–Webuye Road, Kakamega, Kenya</div>
+            <div class="contact-item-label">Headquarters</div>
+                <div class="contact-item-value">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Strategic+Management+Firm+Limited+Kakamega-Webuye+Road+Kakamega+Kenya" 
+                    target="_blank" 
+                    style="text-decoration: none; color: inherit;">
+                    Kakamega–Webuye Road, Kakamega, Kenya
+                    </a>
+                </div>
             </div>
           </div>
           <div class="contact-item">
@@ -294,15 +444,6 @@
             <div>
               <div class="contact-item-label">Email</div>
               <div class="contact-item-value">smfkenya11@gmail.com</div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l5 2.18V11c0 3.5-2.33 6.79-5 7.93C9.33 17.79 7 14.5 7 11V7.18L12 5z"/></svg>
-            </div>
-            <div>
-              <div class="contact-item-label">Registration</div>
-              <div class="contact-item-value">Certificate No. C.166262 — Republic of Kenya</div>
             </div>
           </div>
         </div>
@@ -348,13 +489,30 @@
   </div>
 </section>
 
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeProjectModal()">&times;</span>
+    <div class="modal-header">
+      <div class="modal-tag">Strategic Partnership</div>
+      <h2 id="modalTitle" class="section-title"></h2>
+    </div>
+    <div class="modal-body">
+      <div class="modal-meta-grid">
+        <div class="meta-box"><strong>Timeline:</strong> <span id="modalTimeline"></span></div>
+        <div class="meta-box"><strong>Partner:</strong> <span id="modalPartner"></span></div>
+      </div>
+      <div id="modalDescription" class="about-body"></div>
+    </div>
+  </div>
+</div>
+
 <footer class="footer">
   <div class="footer-container">
 
     <div class="footer-col brand">
       <div class="footer-logo">SMF</div>
       <p class="footer-text">
-        Strategic Management Firm Ltd — delivering research-driven consulting, strategy, and organizational transformation across Kenya.
+        Strategic Management Firm Ltd, delivering research-driven consulting, strategy, and organizational transformation across Kenya.
       </p>
       <p class="footer-motto">Never Compromise Quality</p>
     </div>
@@ -379,15 +537,15 @@
     <div class="footer-col">
       <h4>Contact</h4>
       <p>Nairobi, Kenya</p>
-      <p>info@strategicmanagement.com</p>
-      <p>+254 700 000 000</p>
+      <p>smfkenya11@gmail.com</p>
+      <p>+254 754 777 737</p>
 
       <div class="footer-social">
-        <a href="#" class="social">
+        <a href="https://www.facebook.com/strategicmanagementfirm/" class="social">
           <svg viewBox="0 0 24 24"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5V12H17l-.5 3h-2.6v7C18.3 21.1 22 17 22 12z"/></svg>
         </a>
 
-        <a href="#" class="social">
+        <a href="https://www.linkedin.com/company/strategic-management-firm-ltd/" class="social">
           <svg viewBox="0 0 24 24"><path d="M22 3H2v18h20V3zm-6.7 15h-2.6v-4.6c0-1.1-.4-1.8-1.3-1.8-.7 0-1.1.5-1.3 1-.1.2-.1.5-.1.8V18H7.4v-11h2.6v1.6c.3-.5 1-1.3 2.5-1.3 1.8 0 3.1 1.2 3.1 3.7V18z"/></svg>
         </a>
       </div>
