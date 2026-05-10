@@ -197,7 +197,6 @@ nav {
   50% { transform: translateY(-15px); }
 }
 
-/* Responsive fix for mobile */
 @media (max-width: 900px) {
   .hero-flex-container {
     flex-direction: column;
@@ -439,14 +438,56 @@ nav {
 }
 
 .modal-content {
-  background-color: var(--white);
-  margin: 5% auto;
+  background-color: #ffffff;
+  margin: 5vh auto;
   padding: 3rem;
-  border-left: 4px solid var(--royal-purple);
-  width: 80%;
+  border-left: 5px solid #7b4e9f;
+  width: 90%;
   max-width: 800px;
+  max-height: 85vh;
+  overflow-y: auto;
   position: relative;
-  animation: modalSlide 0.4s ease;
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 1.5rem; 
+    margin: 2vh auto;
+    width: 95%;
+    max-height: 95vh;
+  }
+
+  #modalTitle {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .modal-meta-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin: 1rem 0;
+    padding: 1rem 0;
+  }
+
+  .meta-box strong {
+    font-size: 0.7rem;
+  }
+
+  #modalTimeline, #modalPartner {
+    font-size: 0.9rem;
+  }
+
+  #modalDescription {
+    font-size: 0.9rem; 
+    line-height: 1.6;
+  }
+
+  .close-modal {
+    right: 1rem;
+    top: 0.5rem;
+    font-size: 2rem;
+  }
 }
 
 @keyframes modalSlide {
