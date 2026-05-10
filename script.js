@@ -10,8 +10,10 @@ document.querySelectorAll('.service-card').forEach((card, i) => {
   card.style.transitionDelay = `${i * 0.07}s`;
 });
 
-const submitBtn = document.querySelector('.btn-submit');
-if (contactForm) {
+const contactForm = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+
+if (contactForm && submitBtn) {
   contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
     
