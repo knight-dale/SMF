@@ -84,13 +84,20 @@ function closeProjectModal() {
   document.body.style.overflow = 'auto';
 }
 
-// Close on outside click
 window.onclick = function(event) {
   let modal = document.getElementById('projectModal');
   if (event.target == modal) { closeProjectModal(); }
 }
 
-// Close on Escape key
 window.onkeydown = function(event) {
   if (event.key === "Escape") { closeProjectModal(); }
 }
+
+window.addEventListener('load', () => {
+  const welcomeText = document.getElementById('hero-welcome');
+  if (welcomeText) {
+    setTimeout(() => {
+      welcomeText.classList.add('glow-pulse');
+    }, 500);
+  }
+});
