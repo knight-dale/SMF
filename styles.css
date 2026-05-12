@@ -17,6 +17,7 @@ body {
   overflow-x: hidden;
   width: 100%;
   position: relative;
+  padding-top: 80px;
 }
 
 nav {
@@ -27,6 +28,10 @@ nav {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
   transition: padding 0.3s;
+}
+
+.nav-hidden {
+  top: -100px;
 }
 
 .nav-logo {
