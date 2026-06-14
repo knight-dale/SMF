@@ -33,11 +33,20 @@
   </div>
 </header>
 
+<section style="background: var(--white); padding: 4rem 2rem; border-bottom: 1px solid var(--line); text-align: center;">
+  <div class="section-inner" style="max-width: 700px; margin: 0 auto;">
+    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 400; color: var(--ink); margin-bottom: 1rem;">Contribute Your Analysis</h2>
+    <p style="font-size: 1rem; color: #555; line-height: 1.6; margin-bottom: 2rem;">
+      Do you have rigorous, data-backed insights on economics, policy, regional developments, or technological strategy? Join our circle of external expert contributors.
+    </p>
+    <button class="btn-gallery-trigger" onclick="openSubmissionModal()" style="border: none;">Submit an Article for Review</button>
+  </div>
+</section>
+
 <section style="background: var(--cream); padding: 5rem 2rem;">
   <div class="section-inner">
     <div class="thinkers-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
       
-      <!-- Article 1 -->
       <article class="article-card" style="background: var(--white); border: 1px solid var(--line); border-radius: 4px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
         <div>
           <div style="font-family: 'Barlow Condensed'; font-size: 0.75rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem;">Economy & Budget</div>
@@ -50,7 +59,6 @@
         </div>
       </article>
 
-      <!-- Article 2 -->
       <article class="article-card" style="background: var(--white); border: 1px solid var(--line); border-radius: 4px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
         <div>
           <div style="font-family: 'Barlow Condensed'; font-size: 0.75rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem;">Geopolitics & Conflict</div>
@@ -63,7 +71,6 @@
         </div>
       </article>
 
-      <!-- Article 3 -->
       <article class="article-card" style="background: var(--white); border: 1px solid var(--line); border-radius: 4px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
         <div>
           <div style="font-family: 'Barlow Condensed'; font-size: 0.75rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem;">Emergent Technology</div>
@@ -79,6 +86,58 @@
     </div>
   </div>
 </section>
+
+<div id="submissionModal" class="modal" style="display: none; background-color: rgba(26, 11, 46, 0.96);">
+  <div class="modal-content" style="background-color: #1a0b2e; border-left: 5px solid #c9a84c; max-width: 650px; color: #fff;">
+    <span class="close-modal" onclick="closeSubmissionModal()" style="color: #fff; right: 1.5rem; top: 1.5rem;">&times;</span>
+    
+    <div style="margin-bottom: 2rem;">
+      <span style="font-family: 'Barlow Condensed'; font-size: 0.75rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase;">Draft Repository</span>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; margin-top: 0.5rem; color: #fff;">Submit Article Proposal</h2>
+    </div>
+
+    <form id="article-submission-form" class="contact-form">
+      <input type="hidden" name="access_key" value="3eaa0222-9a88-4412-8d9d-73aa354212ec">
+      <input type="hidden" name="from_name" value="SMF Intellectual Pool Portal">
+      <input type="hidden" name="subject" value="New Thinker Article Submission Draft">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Author Full Name</label>
+          <input type="text" name="author_name" placeholder="Your name/credentials" required style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1);">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" name="author_email" placeholder="correspondence@email.com" required style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1);">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Proposed Title</label>
+          <input type="text" name="article_title" placeholder="e.g., Fiscal Policy Impact Analysis" required style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1);">
+        </div>
+        <div class="form-group">
+          <label>Core Core Pillar Category</label>
+          <select name="article_category" required style="background: #1a0b2e; border-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.85);">
+            <option value="" disabled selected>Select dynamic theme</option>
+            <option>National Budget & Fiscal Policy</option>
+            <option>Political Dynamics & Governance</option>
+            <option>Global Conflict & Logistics Supply</option>
+            <option>Technology & Operational Automation</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Article Abstract / Draft Text Body</label>
+        <textarea name="article_body" placeholder="Provide your full analytical content or text layout summary here..." required style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); height: 200px;"></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit" id="article-submit-btn" style="background: var(--gold); width: 100%; text-align: center; justify-content: center; padding: 1.1rem;">Transmit Draft to Board →</button>
+    </form>
+  </div>
+</div>
 
 <footer class="footer">
   <div class="footer-container">
@@ -121,6 +180,6 @@
     </div>
   </div>
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>

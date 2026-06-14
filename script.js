@@ -136,3 +136,57 @@ window.onclick = function(event) {
 window.onkeydown = function(event) {
   if (event.key === "Escape") { closeProjectModal(); }
 }
+
+function openSubmissionModal() {
+  const modal = document.getElementById('submissionModal');
+  if (modal) {
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeSubmissionModal() {
+  const modal = document.getElementById('submissionModal');
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+}
+
+const articleForm = document.getElementById('article-submission-form');
+const articleBtn = document.getElementById('article-submit-btn');
+
+if (articleForm && articleBtn) {
+  articleForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    articleBtn.textContent = 'Transmitting Draft...';
+    articleBtn.disabled = true;
+
+    const formData = new FormData(articleForm);
+    const obj = Object.fromEntries(formData);
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(obj)
+    })
+    .then(async (res) => {
+      if (res.status == 200) {
+        articleBtn.textContent = 'Draft Received Success ✓';
+        articleBtn.style.background = '#2d6a4f';
+        articleForm.reset();
+        setTimeout(() => { closeSubmissionModal(); }, 2000);
+      } else {
+        articleBtn.textContent = 'Transmission Error';
+      }
+    })
+    .catch(() => { articleBtn.textContent = 'System Network Error'; })
+    .finally(() => {
+      setTimeout(() => {
+        articleBtn.textContent = 'Transmit Draft to Board →';
+        articleBtn.style.background = 'var(--gold)';
+        articleBtn.disabled = false;
+      }, 5000);
+    });
+  });
+}
