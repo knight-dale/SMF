@@ -76,16 +76,20 @@ nav {
 
 .nav-cta {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.15em;
+  font-size: 0.78rem; 
+  font-weight: 600; 
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   padding: 0.6rem 1.6rem;
-  background: var(--gold);
-  color: var(--white);
+  background: var(--royal-purple) !important; 
+  color: var(--white) !important; 
   text-decoration: none;
   transition: background 0.2s;
 }
 
-.nav-cta:hover { background: var(--rust); }
+.nav-cta:hover { 
+  background: var(--ink) !important; 
+}
 
 #hero-welcome {
   transition: all 0.8s ease;

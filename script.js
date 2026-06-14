@@ -164,14 +164,15 @@ if (articleForm && articleBtn) {
 
     const formData = new FormData(articleForm);
     const obj = Object.fromEntries(formData);
+    const json = JSON.stringify(obj);
 
-    fetch('https://api.web3forms.com/submit', {
+    fetch('https://script.google.com/macros/s/AKfycbxy8Up4A5UHCEdPXsj2GHYdCYA-QQ-O2Se9HBkHsQlWhaID8stZJe8vEeY62ii5_GTGTg/exec', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(obj)
+      body: json
     })
     .then(async (res) => {
-      if (res.status == 200) {
+      const result = await res.json();
+      if (result.status === 'success') {
         articleBtn.textContent = 'Draft Received Success ✓';
         articleBtn.style.background = '#2d6a4f';
         articleForm.reset();
@@ -184,7 +185,7 @@ if (articleForm && articleBtn) {
     .finally(() => {
       setTimeout(() => {
         articleBtn.textContent = 'Transmit Draft to Board →';
-        articleBtn.style.background = 'var(--gold)';
+        articleBtn.style.background = '';
         articleBtn.disabled = false;
       }, 5000);
     });
